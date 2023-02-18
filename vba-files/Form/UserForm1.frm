@@ -14,6 +14,7 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
+
 Private Sub btnlogin_Click()
 
 Dim usuario As String
@@ -23,8 +24,8 @@ Dim combi As String
 Dim combi2 As String
 
 
-usuario = Me.usuario.value
-senha = Me.senha.value
+usuario = Me.usuario.Value
+senha = Me.senha.Value
 
 combinacao = False
 
@@ -34,7 +35,7 @@ linhas = worksheetfunction.countA(Planilha2.columns("a"))
 
 For cont = 2 To linhas
 
-combi2 = Planilha2.cells(cont, 1).value & Planilha2.cells(cont, 2).value
+combi2 = Planilha2.cells(cont, 1).Value & Planilha2.cells(cont, 2).Value
 
 combinacao = combi = combi2
 
