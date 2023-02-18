@@ -20,22 +20,30 @@ End Sub
 
 Sub NovoCadastro()
 Dim Pl As Worksheet
-
+Dim Lin As Integer
 Set Pl = Planilha2
 
+Lin = 2
 
 ConectaDB
 
-SQL = "INSERT INTO USERSDB ("
-SQL = SQL & "      Usuario,"
-SQL = SQL & "       senha)"
-SQL = SQL & "VALUES "
-SQL = SQL & " ('" & Pl.Range("A2").Value & "',"
-SQL = SQL & " '" & Pl.Range("B2").Value & "');"
+With Pl
+    Do While .Cells(Lin, 1).Value <> ""
+        SQL = "INSERT INTO USERSDB ("
+        SQL = SQL & "      Usuario,"
+        SQL = SQL & "       senha)"
+        SQL = SQL & "VALUES "
+        SQL = SQL & " ('" & .Cells(Lin, 1).Value & "',"
+        SQL = SQL & " '" & .Cells(Lin, 2).Value & "');"
 
 
 
 cnn.Execute SQL
+    Lin = Lin + 1
+    Loop
+    
+
+End With
 
 cnn.Close
 

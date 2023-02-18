@@ -35,7 +35,7 @@ linhas = worksheetfunction.countA(Planilha2.columns("a"))
 
 For cont = 2 To linhas
 
-combi2 = Planilha2.cells(cont, 1).Value & Planilha2.cells(cont, 2).Value
+combi2 = Planilha2.Cells(cont, 1).Value & Planilha2.Cells(cont, 2).Value
 
 combinacao = combi = combi2
 
