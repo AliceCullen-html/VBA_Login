@@ -1,8 +1,10 @@
 Attribute VB_Name = "Sql"
 Option Explicit
 
+Public Pl As Worksheet
 Public cnn As New ADODB.Connection
 Public SQL As String
+
 
 Public Sub ConectaDB()
 
