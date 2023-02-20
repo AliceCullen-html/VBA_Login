@@ -14,10 +14,13 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
+Private Sub sair_Click()
+
+Unload UserForm2
 
 
 
-
+End Sub
 
 Private Sub UserForm_Initialize()
 
