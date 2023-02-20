@@ -14,8 +14,6 @@ End If
 
 Debug.Print cnn.State
 
-
-
 End Sub
 
 Sub NovoCadastro()
